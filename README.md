@@ -133,9 +133,64 @@ This project provided hands-on practice with:
 
 ## BI and Data Engineering Upgrade
 
-This branch will add a production-style data pipeline, data quality checks,
-dimensional modeling, SQL analytics, and BI-ready marts to strengthen the
-project as a portfolio-ready BI and data engineering example.
+### Purpose
+
+This upgrade turns the project from dashboard-only analytics into a reusable
+BI and data engineering workflow. It adds a more production-style approach to
+handling retail data, preparing trusted outputs, and supporting downstream
+analytics and dashboard work.
+
+### Pipeline Flow
+
+```text
+Raw Excel data
+→ src/extract.py
+→ src/validation.py
+→ src/transform.py
+→ data/processed/online_retail_clean.csv
+→ src/build_marts.py
+→ data/marts/*.csv
+→ SQL analytics / dashboards / Power BI
+```
+
+### Key Folders
+
+- src/ = reusable Python pipeline code
+- data/raw or data/ = local source data
+- data/processed/ = processed clean CSV output
+- data/marts/ = BI-ready fact, dimension, and summary tables
+- sql/ = business analysis queries
+- docs/ = project documentation
+- dashboards/ = future BI dashboard notes or Power BI/Streamlit BI material
+
+### How to Run the Pipeline
+
+Run the following commands from the project root:
+
+```bash
+python src/transform.py
+python src/build_marts.py
+```
+
+### SQL Analytics Layer
+
+The sql/ folder contains portfolio-friendly SQL queries for:
+
+- revenue trends
+- country performance
+- product performance
+- returns and data quality checks
+
+### Portfolio Value
+
+This upgrade demonstrates:
+
+- data processing
+- reusable Python modules
+- data validation
+- BI-ready marts
+- SQL analytics
+- dashboard readiness
 
 ## Portfolio Summary
 
