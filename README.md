@@ -131,6 +131,12 @@ This project provided hands-on practice with:
 - Agent-style analysis planning
 - Communicating findings and limitations
 
+## BI and Data Engineering Upgrade
+
+This branch will add a production-style data pipeline, data quality checks,
+dimensional modeling, SQL analytics, and BI-ready marts to strengthen the
+project as a portfolio-ready BI and data engineering example.
+
 ## Portfolio Summary
 
 Built a four-stage retail analytics lab using Python, pandas, and Streamlit,
